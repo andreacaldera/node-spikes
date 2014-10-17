@@ -6,9 +6,9 @@
 - mongod (development only)
 
 ## Development
-- `mkdir -p <your-db-dir>/data && cd <your-db-dir>/data && mongod --dbpath <your-db-dir>/data`
-- `cd login-spike && nodemon server.js` (or node server.js for production)
-- add configuration login-spike/config/private/facebook.js as following
+1. `mkdir -p <your-db-dir>/data && cd <your-db-dir>/data && mongod --dbpath <your-db-dir>/data`
+1. `cd login-spike && nodemon server.js` (or node server.js for production)
+1. add configuration `login-spike/config/private/facebook.js` as following
  ```javascript
 module.exports = {
     clientID: '<your-client-id>',
