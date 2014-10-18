@@ -1,0 +1,6 @@
+<p>Welcome back
+    <strong>
+        <% if (!!user.facebook.id) { %> <%= user.facebook.name %> <% } %>
+        <% if (!!user.local.email) { %> <%= user.local.email %> <% } %>
+    </strong>
+</p>

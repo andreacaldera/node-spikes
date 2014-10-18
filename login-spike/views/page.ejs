@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<% include includes/head %>
+
+<body>
+<div class="minimal-font container">
+
+    <% include includes/topbar %>
+
+    <% include includes/warnings %>
+
+	<div class="jumbotron text-center">
+
+        <h1><%= title %></h1>
+
+        <!-- currently it looks like it's not possible to pass a variable to an include directive - see https://github.com/visionmedia/ejs/issues/93 -->
+        <% if (content === 'index') { %> <% include includes/index %> <% } %>
+        <% if (content === 'login') { %> <% include includes/login %> <% } %>
+        <% if (content === 'profile') { %> <% include includes/profile %> <% } %>
+        <% if (content === 'signup') { %> <% include includes/signup %> <% } %>
+
+	</div>
+
+</div>
+
+</body>
+<% include includes/js %>
+</html>

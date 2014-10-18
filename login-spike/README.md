@@ -6,6 +6,9 @@
 - mongod (development only)
 
 ## Development
+
+1. `cd cd login-spike && npm install`
+
 1. `mkdir -p <your-db-dir>/data && cd <your-db-dir>/data && mongod --dbpath <your-db-dir>/data`
 
 1. `cd login-spike && nodemon server.js` (or node server.js for production)
