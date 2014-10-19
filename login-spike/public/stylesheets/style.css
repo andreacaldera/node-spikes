@@ -7,7 +7,6 @@ body {
     font-style: normal;
     font-weight: normal;
 }
-
 .minimal-font h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: AtlasTypewriterRegular, 'Andale Mono', Consolas, 'Lucida Console', Menlo, 'Luxi Mono', monospace;
 }
@@ -15,13 +14,26 @@ body {
 .dark-minimal.btn {
     color: white;
 }
-
 .dark-minimal.btn:hover, .dark-minimal.btn:focus {
     color: white;
     background-color: darkgrey;
 }
-
 .dark-minimal .btn:active {
     color: white;
     background-color: darkgrey;
+}
+
+ol.no-list-type {
+    list-style-type: none;
+}
+li.divider {
+    height: 1px;
+    margin: 9px 0;
+    overflow: hidden;
+    background-color: #e5e5e5;
+}
+
+hr.thick {
+    background-color: #e5e5e5;
+    height: 2px;
 }

@@ -1,14 +1,14 @@
-var express  = require('express');
-var app      = express();
-var port     = process.env.PORT || 8080;
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 8080;
 var mongoose = require('mongoose');
 var passport = require('passport');
-var flash 	 = require('connect-flash');
+var flash = require('connect-flash');
 
-var morgan       = require('morgan');
+var morgan = require('morgan');
 var cookieParser = require('cookie-parser');
-var bodyParser   = require('body-parser');
-var session      = require('express-session');
+var bodyParser = require('body-parser');
+var session = require('express-session');
 
 var database = require('./config/database.js');
 
@@ -33,6 +33,7 @@ app.use(flash()); // use connect-flash for flash messages stored in session
 app.use(express.static(__dirname + '/public'));
 
 require('./app/routes.js')(app, passport);
+require('./app/freecycle-routes.js')(app);
 
 app.listen(port);
 console.log('Listening on port ' + port);

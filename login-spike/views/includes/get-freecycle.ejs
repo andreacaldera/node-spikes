@@ -1,0 +1,15 @@
+<% if (!!freecytems && freecytems.length > 0) { %>
+<p>Who needs to buy when you can Freecycle? Grab a freebie!</p>
+<hr class="thick"/>
+<ol class="no-list-type">
+    <% freecytems.forEach(function (freecytem) { %>
+    <li>
+        <strong><%= freecytem.title %></strong> from <strong><%= freecytem.location %></strong>
+        <% if (freecytem.description) { %> : <%= freecytem.description %> <% } %>
+    </li>
+    <li class="divider"></li>
+    <% }); %>
+</ol>
+<% } else { %>
+<p>Sorry pal, no Freecycle items found here :(</p>
+<% } %>

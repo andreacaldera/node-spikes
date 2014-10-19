@@ -14,11 +14,14 @@
 
         <h1><%= title %></h1>
 
-        <!-- currently it looks like it's not possible to pass a variable to an include directive - see https://github.com/visionmedia/ejs/issues/93 -->
-        <% if (content === 'index') { %> <% include includes/index %> <% } %>
-        <% if (content === 'login') { %> <% include includes/login %> <% } %>
-        <% if (content === 'profile') { %> <% include includes/profile %> <% } %>
-        <% if (content === 'signup') { %> <% include includes/signup %> <% } %>
+        <!-- currently it seems that it's not possible to pass a variable to an include directive - see https://github.com/visionmedia/ejs/issues/93 -->
+        <% if (content === 'index') { %> <% include includes/index %>
+        <% } else if (content === 'login') { %> <% include includes/login %>
+        <% } else if (content === 'signup') { %> <% include includes/signup %>
+        <% } else if (content === 'profile') { %> <% include includes/profile %>
+        <% } else if (content === 'get-freecycle') { %> <% include includes/get-freecycle %>
+        <% } else if (content === 'add-freecycle') { %> <% include includes/add-freecycle %>
+        <% } else { %> <div class="minimal-font alert alert-danger">Content not defined for this page :(</div> <% } %>
 
 	</div>
 

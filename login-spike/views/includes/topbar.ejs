@@ -15,18 +15,25 @@
             <li class="dropdown">
                 <a data-toggle="dropdown" class="dropdown-toggle" href="#">Enter <b class="caret"></b></a>
                 <ul role="menu" class="dropdown-menu">
-                    <li><a href="login">Login</a></li>
-                    <li><a href="login/facebook">Facebook</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/login/facebook">Facebook</a></li>
                     <li class="divider"></li>
-                    <li><a href="signup">Sign up</a></li>
+                    <li><a href="/signup">Sign up</a></li>
                 </ul>
             </li>
             <li><a href="profile">Profile</a></li>
+            <li class="dropdown">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">Freecycle <b class="caret"></b></a>
+                <ul role="menu" class="dropdown-menu">
+                    <li><a href="/freecycle/add">Add</a></li>
+                    <li><a href="/freecycle">Listing</a></li>
+                </ul>
+            </li>
 
         </ul>
-        <form role="search" class="navbar-form navbar-left">
+        <form role="search" action="" class="navbar-form navbar-left">
             <div class="form-group">
-                <input type="text" placeholder="Search" class="form-control">
+                <input name="q_title" type="text" placeholder="Search" class="form-control">
             </div>
         </form>
         <% if (loggedIn) { %>
