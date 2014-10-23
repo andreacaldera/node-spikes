@@ -3,3 +3,4 @@ data/**
 .idea
 *.iml
 node_modules/**
+public/images/freecytem/**
