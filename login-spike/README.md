@@ -4,6 +4,7 @@
 - MongoDB
 - Nodemon: 'npm install -g nodemon' (development only)
 - mongod (development only)
+- Imagemagick: `brew install imagemagick`
 
 ## Development
 

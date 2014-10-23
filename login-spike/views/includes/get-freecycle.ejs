@@ -1,15 +1,18 @@
 <% if (!!freecytems && freecytems.length > 0) { %>
 <p>Who needs to buy when you can Freecycle? Grab a freebie!</p>
 <hr class="thick"/>
-<ol class="no-list-type">
-    <% freecytems.forEach(function (freecytem) { %>
-    <li>
-        <strong><%= freecytem.title %></strong> from <strong><%= freecytem.location %></strong>
-        <% if (freecytem.description) { %> : <%= freecytem.description %> <% } %>
-    </li>
-    <li class="divider"></li>
-    <% }); %>
-</ol>
+
+<% freecytems.forEach(function (freecytem) { %>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-8"><strong><%= freecytem.title %></strong> from <strong><%= freecytem.location %></strong></div>
+        <div class="col-xs-6 col-lg-4">
+            <% if (freecytem.image) { %>
+            <img class="freecycle-thumbnail img-thumbnail" src=<%= freecytem.image %>></img>
+            <% } %>
+        </div>
+    </div>
+    <hr class="thick"/>
+<% }); %>
 <% } else { %>
 <p>Sorry pal, no Freecycle items found here :(</p>
 <% } %>

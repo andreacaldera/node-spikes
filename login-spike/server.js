@@ -12,6 +12,9 @@ var session = require('express-session');
 
 var database = require('./config/database.js');
 
+var quickthumb = require('quickthumb');
+app.use(quickthumb.static(__dirname + '/'));
+
 // configuration ===============================================================
 mongoose.connect(database.url); // connect to our database
 

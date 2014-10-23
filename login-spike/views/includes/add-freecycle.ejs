@@ -1,4 +1,4 @@
-<form action="/api/freecycle/freecytem" method="post">
+<form action="/api/freecycle/freecytem" method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label>Title</label>
         <input type="text" class="form-control" name="title">
@@ -10,6 +10,13 @@
     <div class="form-group">
         <label>Location</label>
         <input type="text" class="form-control" name="location">
+    </div>
+
+    <div class="form-group">
+        <span id="imageInputLabel" class="dark-minimal btn btn-default btn-file">
+        Add an image <input id="imageInput" multiple="multiple" name="image" type="file"/>
+        </span>
+        <span id="image" class="dark-minimal">Image not selected</span>
     </div>
 
     <button type="submit" class="dark-minimal btn">Add</button>

@@ -2,6 +2,10 @@ body {
     padding-top: 20px;
 }
 
+#main.container {
+    width: 100%;
+}
+
 .minimal-font {
     font-family: AtlasTypewriterRegular, 'Andale Mono', Consolas, 'Lucida Console', Menlo, 'Luxi Mono', monospace;
     font-style: normal;
@@ -36,4 +40,34 @@ li.divider {
 hr.thick {
     background-color: #e5e5e5;
     height: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dark-minimal.btn-file {
+    position: relative;
+    overflow: hidden;
+    background-color: silver;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    cursor: inherit;
+    display: block;
+}
+
+#image {
+    display: none;
+}
+
+.freecycle-thumbnail.img-thumbnail {
+    height: 300px;
 }
