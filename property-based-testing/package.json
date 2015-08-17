@@ -5,7 +5,13 @@
   "main": "",
   "scripts": {
     "start": "node main.js",
-    "test": "./node_modules/.bin/mocha "
+    "test": "./node_modules/.bin/mocha -r blanket -R html-cov > coverage.html"
+  },
+  "config": {
+    "blanket": {
+       "pattern": "test",
+        "data-cover-never": "node_modules"
+    }
   },
   "dependencies": {
     "async": "0.9.0",
@@ -14,6 +20,7 @@
     "underscore": "1.8.2"
   },
   "devDependencies": {
+    "blanket": "^1.1.7",
     "chai": "^1.10.0",
     "jsverify": "^0.6.3",
     "mocha": "^2.2.5"
