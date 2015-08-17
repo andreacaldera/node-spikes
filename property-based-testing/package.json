@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "chai": "^1.10.0",
+    "jsverify": "^0.6.3",
     "mocha": "^2.2.5"
   }
 }
