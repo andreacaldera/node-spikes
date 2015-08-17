@@ -9,7 +9,7 @@ describe("Add", function() {
 		expect(add(1, 1)).to.equal(2);		
     });
 
-    it("should add two random numbers", function() {
+	it("should add two random numbers", function() {
 
     	var randomAdd = jsc.forall("integer", "integer", function (x, y) {
     		return add(x, y) === add(y, x);
