@@ -1,0 +1,48 @@
+dn: dc=org
+objectClass: domain
+objectClass: top
+dc: org
+
+dn: dc=acal,dc=org
+objectClass: domain
+objectClass: top
+dc: example
+aci: (target ="ldap:///dc=acal,dc=org")(targetattr != "userPassword")(version 3.0;acl "Anonymous read-search access"; allow (read, search, compare)(userdn = "ldap:///anyone");)
+aci: (target="ldap:///dc=acal,dc=org") (targetattr = "*")(version 3.0; acl "allow all Admin group"; allow(all) groupdn = "ldap:///cn=Directory Administrators,ou=Groups,dc=acal,dc=org";)
+
+dn: ou=Company Servers,dc=acal,dc=org
+objectClass: organizationalUnit
+objectClass: top
+description: Standard branch for Company Server
+ou: Company Servers
+
+dn: ou=Groups,dc=acal,dc=org
+objectClass: organizationalunit
+objectClass: top
+ou: Groups
+
+dn: cn=Directory Administrators,ou=Groups,dc=acal,dc=org
+objectClass: groupofuniquenames
+objectClass: top
+ou: Groups
+cn: Directory Administrators
+uniquemember: uid=admin, ou=People, dc=acal,dc=org
+
+dn: ou=People,dc=acal,dc=org
+objectClass: organizationalunit
+objectClass: top
+ou: People
+aci: (target ="ldap:///ou=People,dc=acal,dc=org")(targetattr = "userpassword", "mobile")(version 3.0; acl "Allow self entry modification";allow (write)(userdn = "ldap:///self");)
+
+dn: uid=andrea.caldera,ou=People,dc=acal,dc=org
+objectClass: person
+objectClass: top
+uid: andrea.caldera
+userpassword: monday123
+givenname: Andrea
+cn: Andrea Caldera
+sn: Caldera
+mail: acaldera@equalexperts.com
+mobile: 1234567890
+l: London
+ou: People
