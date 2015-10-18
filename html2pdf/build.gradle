@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.12'
+    compile 'com.lowagie:itext:4.2.2'
+    compile 'com.itextpdf.tool:xmlworker:5.5.7'
+    compile 'org.bouncycastle:bcprov-jdk15on:1.49'
+
+    testCompile 'junit:junit:4.12'
+}

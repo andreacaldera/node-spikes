@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <link rel="stylesheet" type="text/css" href="pdf-template.css"/>
+</head>
+<body>
+
+<table style="repeat-header:yes">
+    ${header}
+    <tbody>
+    <tr>
+        <td colspan="12" class="header">First table title</td>
+    </tr>
+    <tr>
+        <td colspan="2">First field</td>
+        <td colspan="6">${firstField}</td>
+        <td colspan="2">Date/time</td>
+        <td colspan="2">${dateTime}</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <div>Second field A</div>
+            <div>Second field B</div>
+            <div>Second field C</div>
+        </td>
+        <td colspan="6">${secondField}</td>
+        <td colspan="2">Third field</td>
+        <td colspan="2">${thirdField}</td>
+    </tr>
+    <tr>
+        <td colspan="3">Some options</td>
+        <td colspan="3">1. Option one</td>
+        <td colspan="3">2. Option two</td>
+        <td colspan="3">3. Option three</td>
+    </tr>
+    <tr>
+        <td colspan="12">Fourth field</td>
+    </tr>
+    <tr>
+        <td colspan="6">Fifth field A</td>
+        <td colspan="3">Fifth field B</td>
+        <td colspan="3">Fifth field C</td>
+    </tr>
+    <tr>
+        <td colspan="9">Sixth field</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+    </tr>
+    <tr class="long-textbox">
+        <td colspan="10">${longText}</td>
+        <td colspan="2"></td>
+    </tr>
+    </tbody>
+</table>
+
+<table style="repeat-header:yes; page-break-before:always;">
+    ${header}
+    <tbody>
+    <tr>
+        <td colspan="4">
+            <div><strong>Seventh field A</strong></div>
+            <div>Seventh field B</div>
+        </td>
+        <td colspan="4">
+            <div><strong>Eighth field A</strong></div>
+            <div>Eighth field B</div>
+        </td>
+        <td colspan="4">
+            <div><strong>Ninth field A</strong></div>
+            <div>Ninth field B</div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="12">
+            <div style="width: 100%; text-align: center;"><strong>Tenth field</strong></div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
+            <div><strong>Eleventh field A</strong></div>
+            <div>Some text here</div>
+            <div>${eleventhFieldA}</div>
+        </td>
+        <td colspan="4">
+            <div><strong>Eleventh field B</strong></div>
+            <div>Some text here</div>
+            <div>${eleventhFieldB}</div>
+        </td>
+        <td colspan="4">
+            <div><strong>Eleventh field C</strong></div>
+            <div>Some text here</div>
+            <div>${eleventhFieldC}</div>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="12">
+            <div style="width: 100%; text-align: center;"><strong>Twelfth Field</strong></div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+
+</html>
