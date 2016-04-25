@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+
+    script(src='https://code.jquery.com/jquery-2.2.3.js')
+
+    script(type='text/javascript').
+      UPLOADCARE_PUBLIC_KEY = "demopublickey";
+
+    script(src='https://ucarecdn.com/widget/2.8.2/uploadcare/uploadcare.full.min.js')
+
+    script(src='./javascripts/uploadcare.js')
+
+  body
+    block content

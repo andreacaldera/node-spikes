@@ -1,0 +1,14 @@
+extends layout
+
+head
+    title uploadcare test
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form(id='uploadcare-form')
+    input(type="hidden" role="uploadcare-uploader" name="my_file" data-public-key="demopublickey" class="spike-progress")
+
+  div(class='upload-result')
+
