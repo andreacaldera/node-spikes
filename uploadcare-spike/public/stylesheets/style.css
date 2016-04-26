@@ -13,6 +13,10 @@ a {
   display: none !important;
 }
 
+.uploader-green-button .uploadcare-widget-button-open {
+    background-color: #15c25a;
+}
+
 .upload-result {
     display: none;
 }
