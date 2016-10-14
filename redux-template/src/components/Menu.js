@@ -2,8 +2,10 @@ import React, { Component } from 'react'
 import { browserHistory } from 'react-router'
 
 export default class Menu extends Component {
-  routeChange = (e, path) => {
+  routeChange = (e) => {
     e.preventDefault();
+    const pathParts = e.target.href.split('/');
+    const path = pathParts[pathParts.length - 1];
     browserHistory.push(`${path}`);
   }
 
@@ -11,8 +13,9 @@ export default class Menu extends Component {
     return (
       <div>
         <a href="/" onClick={(e) => this.routeChange(e, '/')}>Home</a>
-        <a href="/about" onClick={(e) => this.routeChange(e, 'about')}>About</a>
-        <a href="/contact" onClick={(e) => this.routeChange(e, 'contact')}>Contact</a>
+        <a href="/about" onClick={this.routeChange}>About</a>
+        <a href="/contact" onClick={this.routeChange}>Contact</a>
+        <a href="/example" onClick={this.routeChange}>Example</a>
       </div>
     )
   }
